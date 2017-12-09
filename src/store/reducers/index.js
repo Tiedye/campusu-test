@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import { ADD_WORKFLOW_ITEM, MOVE_WORKFLOW_ITEM, DELETE_WORKFLOW_ITEM } from "../actions";
+import { ADD_WORKFLOW_ITEM, MOVE_WORKFLOW_ITEM, DELETE_WORKFLOW_ITEM, SET_WORKFLOW_ITEMS } from "../actions";
 
 export const initialWorkflowState = {
   actions: [
@@ -59,6 +59,12 @@ const workflow = (state = initialWorkflowState, action) => {
         ...state,
         items
       };
+    }
+    case SET_WORKFLOW_ITEMS: {
+      return {
+        ...state,
+        items: action.items
+      }
     }
     default: return state;
   }

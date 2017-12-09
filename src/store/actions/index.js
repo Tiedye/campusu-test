@@ -1,3 +1,9 @@
+export const SET_WORKFLOW_ITEMS = 'set workflow items';
+export const setWorkflowItems = items => ({
+  type: SET_WORKFLOW_ITEMS,
+  items
+});
+
 export const ADD_WORKFLOW_ITEM = 'add workflow item';
 export const addWorkflowItem = (action, index) => ({
   type: ADD_WORKFLOW_ITEM,
@@ -18,4 +24,5 @@ export const deleteWorkflowItem = index => ({
   index
 });
 
-export const saveWorkflow = (items) => (dispatch) => localStorage.setItem('workflow', JSON.stringify(items));
+export const saveWorkflow = items => () => localStorage.setItem('workflow', JSON.stringify(items));
+export const revertWorkflow = () => dispatch => dispatch(setWorkflowItems(JSON.parse(localStorage.getItem('workflow'))))
