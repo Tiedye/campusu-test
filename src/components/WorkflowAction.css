@@ -1,0 +1,8 @@
+.workflow-action {
+  padding: 10px;
+  margin: 10px;
+  border: solid 1px grey;
+  background: white;
+  user-select: none;
+  cursor: move;
+}

@@ -1,0 +1,21 @@
+.workflow-item {
+  padding: 10px;
+}
+.workflow-item-inner {
+  padding: 10px;
+  border: solid 1px grey;
+  background: white;
+  user-select: none;
+  cursor: move;
+  width: 80px;
+}
+
+.delete {
+  font-size: 2em;
+  line-height: 0.5;
+  color: rgb(240, 40, 40);
+  
+  margin-left: 5px;
+  cursor: pointer;
+  float: right;
+}
